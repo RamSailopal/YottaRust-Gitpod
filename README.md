@@ -12,12 +12,12 @@ The first window can be ignored, the second window will give access to the Yotta
 
 A simple test code example is stored in the code folder:
 
-   require 'mg_ruby'
-   mg_ruby = MG_RUBY.new()
-   mg_ruby.m_set_host('localhost', 7042, '', '')
-   mg_ruby.m_set("^TEST", "1", "Testing")
-   res = mg_ruby.m_get("^TEST", "1")
-   puts res.inspect
+    require 'mg_ruby'
+    mg_ruby = MG_RUBY.new()
+    mg_ruby.m_set_host('localhost', 7042, '', '')
+    mg_ruby.m_set("^TEST", "1", "Testing")
+    res = mg_ruby.m_get("^TEST", "1")
+    puts res.inspect
 
  
 This can be run in the third window with:
