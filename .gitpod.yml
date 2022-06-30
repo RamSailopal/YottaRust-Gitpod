@@ -1,0 +1,15 @@
+
+tasks:
+  - name: "Run the container"
+    command: docker run --name yottadb --entrypoint /home/rubycode/entrypoint.sh -it -v $PWD/code:/home/rubycode docker.io/yottadb/yottadb-base
+
+  - name: "Run YottaDB prompt"
+    command:  sleep 60 && docker exec -it yottadb /opt/yottadb/current/ydb
+    openMode: split-right
+
+  - name: "Run command line"
+    command:  sleep 60 && docker exec -it yottadb bash -c "source /opt/yottadb/current/ydb_env_set && cd /home/luacode && bash"
+    openMode: split-right
+
+
+
