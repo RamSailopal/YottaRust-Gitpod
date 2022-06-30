@@ -8,7 +8,7 @@ tasks:
     openMode: split-right
 
   - name: "Run command line"
-    command:  sleep 60 && docker exec -it yottadb bash -c "source /opt/yottadb/current/ydb_env_set && cd /home/luacode && bash"
+    command:  sleep 60 && docker exec -it yottadb bash -c "source /opt/yottadb/current/ydb_env_set && cd /home/rubycode && bash"
     openMode: split-right
 
 
